@@ -8,11 +8,12 @@
 using std::size;
 using std::vector;
 
+// BruteForce: Time=O(n^2), Space=O(1)
 bool HasTwoSum1(vector<int>& A, int target) {
-  for (int i=0; i<A.size(); ++i) {  // A.size()-1 -> A.size() to allow add itself
-    for (int j=i; j<A.size(); ++j) {  // j=i+1 -> j=i to allow add itself
-      int sum = A[i] + A[j];
-      if (sum == target) {
+  for (int i=0; i<(int)A.size()-1; ++i) {
+    int complement = target - A[i];
+    for (int j=i+1; j<A.size(); ++j) {
+      if (A[j] == complement) {
         return true;
       }
     }
@@ -20,11 +21,11 @@ bool HasTwoSum1(vector<int>& A, int target) {
   return false;
 }
 
-// Two Sum 2: Time=O(nlogn), Space=O(1) for inspace sort
+// Using Sorting: Time=O(nlogn), Space=O(1) for inspace sort
 bool HasTwoSum2(vector<int>& A, int target) {
   std::sort(A.begin(), A.end());
   int i = 0, j = A.size() - 1;
-  while (i <= j) {  // i < j -> i<=j to allow add itself
+  while (i < j) {
     int sum = A[i] + A[j];
     if (sum == target) {
       return true;
@@ -37,13 +38,13 @@ bool HasTwoSum2(vector<int>& A, int target) {
   return false;
 }
 
+// Dynamic Programming: Time=O(n), Space=O(n)
 bool HasTwoSum3(vector<int>& A, int target) {
   std::unordered_map<int, int> mp;
 
   for (int i=0; i<A.size(); ++i) {
     int complement = target - A[i];
-    if(complement * 2 == target ||  // allow add itself
-        mp.find(complement) != mp.end()) {
+    if(mp.find(complement) != mp.end()) {
       return true;
     }
     mp[A[i]] = i;

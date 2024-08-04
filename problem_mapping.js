@@ -65,7 +65,7 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
@@ -2359,12 +2359,20 @@ problem_mapping = {
             }
         },
         "17.03 The interval covering problem": {
+            "C++: container_with_most_water.cc": {
+                "passed": 7,
+                "total": 7
+            },
             "C++: minimum_points_covering_intervals.cc": {
                 "passed": 0,
                 "total": 103
             },
+            "C++: trapping_rainwater.cc": {
+                "passed": 7,
+                "total": 7
+            },
             "C++: two_sum.cc": {
-                "passed": 0,
+                "passed": 1005,
                 "total": 1005
             },
             "Java: MinimumPointsCoveringIntervals.java": {
