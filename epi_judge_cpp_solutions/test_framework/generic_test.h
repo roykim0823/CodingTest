@@ -46,6 +46,7 @@ int GenericTestMain(
     TestConfig config = TestConfig::FromCommandLine(
         test_file, test_data_file,
         std::chrono::seconds{config_override["timeoutSeconds"]},
+        //std::chrono::seconds{1000},
         config_override["numFailedTestsBeforeStop"], commandline_args);
 
     if (program_config) {
