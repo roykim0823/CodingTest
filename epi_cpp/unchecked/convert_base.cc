@@ -1,6 +1,5 @@
 #include <numeric>
 #include <string>
-
 #include "test_framework/generic_test.h"
 
 using std::accumulate;
@@ -23,14 +22,50 @@ string ConstructFromBase(int num_as_int, int base) {
   return num_as_int == 0
              ? ""
              : ConstructFromBase(num_as_int / base, base) +
-                   static_cast<char>(num_as_int % base >= 10
-                                         ? 'A' + num_as_int % base - 10
-                                         : '0' + num_as_int % base);
+                   (char)(num_as_int % base >= 10 ? 'A' + num_as_int % base - 10
+                                                  : '0' + num_as_int % base);
 }
+
+// original version
+// number string base b1 -> base b2 (2<=base<=16)
+string convertBase(const string &s, const int b1, const int b2) {
+  // Check if the number is negative
+  bool neg = false;  // default
+  if(s[0] == '-')
+    neg = true;
+
+  int x=0;
+  size_t i= (neg == true? 1:0);  // calculate start index of the number
+  for (; i<s.size(); ++i) {
+    x = x * b1;
+    if(isdigit(s[i]))
+      x += s[i] - '0';
+    else
+      x += s[i] - 'A' + 10;
+  }
+
+  string ans;
+  while(x) {  // digits on base b2 in reverse order
+    int r = x % b2;
+    ans.push_back(r>=10 ? 'A' + r-10 : '0' + r);
+    x /= b2;
+  }
+
+  if(ans.empty())
+    ans.push_back('0');
+  if(neg)
+    ans.push_back('-');
+
+  reverse(ans.begin(), ans.end());
+  return ans;
+}
+
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"num_as_string", "b1", "b2"};
-  return GenericTestMain(args, "convert_base.cc", "convert_base.tsv",
-                         &ConvertBase, DefaultComparator{}, param_names);
+  GenericTestMain(args, "convert_base.cc", "convert_base.tsv",
+                  &ConvertBase, DefaultComparator{}, param_names);
+  GenericTestMain(args, "convert_base.cc", "convert_base.tsv",
+                  &convertBase, DefaultComparator{}, param_names);
 }

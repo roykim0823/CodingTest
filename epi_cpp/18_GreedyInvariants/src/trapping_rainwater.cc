@@ -2,7 +2,7 @@
 #include <iterator>
 #include <vector>
 
-#include "../../test_framework/generic_test.h"
+#include "test_framework/generic_test.h"
 using std::size;
 using std::vector;
 

@@ -6,6 +6,13 @@
 
 using std::string;
 
+// Two step reverse words
+// 1. reverse the entire string
+// 2. reverse each string
+// ex) "ram is costly"
+//     1. "yltsoc si mar"
+//     2. "costly is ram"
+
 void ReverseWords(string* s) {
   // First, reverses the whole string.
   reverse(begin(*s), end(*s));
@@ -20,10 +27,25 @@ void ReverseWords(string* s) {
   reverse(begin(*s) + start, end(*s));
 }
 
+void ReverseWords_ref(string& s) {
+  // First, reverses the whole string.
+  reverse(s.begin(), s.end());
+
+  size_t start = 0, finish;
+  while ((finish = s.find(" ", start)) != string::npos) {
+    // Reverses each word in the string.
+    reverse(s.begin() + start, s.begin() + finish);
+    start = finish + 1;
+  }
+  // Reverses the last word.
+  reverse(s.begin() + start, s.end());
+}
+
 string ReverseWordsWrapper(TimedExecutor& executor, string s) {
   string s_copy = s;
 
-  executor.Run([&] { ReverseWords(&s_copy); });
+  // executor.Run([&] { ReverseWords(&s_copy); });
+  executor.Run([&] { ReverseWords_ref(s_copy); });
 
   return s_copy;
 }
