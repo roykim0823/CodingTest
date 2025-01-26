@@ -172,7 +172,7 @@ problem_mapping = {
     "Chapter 05: Arrays": {
         "5.00 Bootcamp: Arrays": {
             "C++: even_odd_array.cc": {
-                "passed": 0,
+                "passed": 1001,
                 "total": 1001
             },
             "Java: EvenOddArray.java": {
@@ -424,7 +424,7 @@ problem_mapping = {
         },
         "5.18 Compute the spiral ordering of a 2D array": {
             "C++: spiral_ordering.cc": {
-                "passed": 0,
+                "passed": 51,
                 "total": 51
             },
             "Java: SpiralOrdering.java": {
@@ -452,7 +452,7 @@ problem_mapping = {
         },
         "5.20 Compute rows in Pascal's Triangle": {
             "C++: pascal_triangle.cc": {
-                "passed": 0,
+                "passed": 35,
                 "total": 35
             },
             "Java: PascalTriangle.java": {
@@ -1976,20 +1976,6 @@ problem_mapping = {
             "Python: hanoi.py": {
                 "passed": 0,
                 "total": 10
-            }
-        },
-        "15.02 Compute all mnemonics for a phone number": {
-            "C++: phone_number_mnemonic.cc": {
-                "passed": 0,
-                "total": 102
-            },
-            "Java: PhoneNumberMnemonic.java": {
-                "passed": 0,
-                "total": 102
-            },
-            "Python: phone_number_mnemonic.py": {
-                "passed": 0,
-                "total": 102
             }
         },
         "15.03 Generate all nonattacking placements of n-Queens": {

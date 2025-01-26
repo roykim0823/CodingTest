@@ -2,7 +2,7 @@
 #include <memory>
 #include <vector>
 
-#include "posting_list_node.h"
+#include "include/posting_list_node.h"
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
