@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
-project(05)
+project(14)
 
 set(CMAKE_CXX_FLAGS "-std=c++1z -g -Wall")
 
 include_directories(include)
-
 file(GLOB SRCS "src/*.cc")
 
 foreach(src IN LISTS SRCS) 

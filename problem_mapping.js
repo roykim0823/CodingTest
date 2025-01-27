@@ -1412,7 +1412,7 @@ problem_mapping = {
         },
         "11.09 Find the missing IP address": {
             "C++: absent_value_array.cc": {
-                "passed": 0,
+                "passed": 100,
                 "total": 100
             },
             "Java: AbsentValueArray.java": {
@@ -1484,7 +1484,7 @@ problem_mapping = {
         },
         "12.03 Implement an ISBN cache": {
             "C++: lru_cache.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: LruCache.java": {
@@ -2494,7 +2494,7 @@ problem_mapping = {
         },
         "18.04 Deadlock detection": {
             "C++: deadlock_detection.cc": {
-                "passed": 0,
+                "passed": 71,
                 "total": 71
             },
             "Java: DeadlockDetection.java": {

@@ -82,7 +82,8 @@
     9.07 tree_level_order.cc
     9.08 circular_queue.cc
     9.09 queue_from_stacks.cc
-    9.10 queue_with_max.cc
+    9.10 queue_with_max.cc &
+         queue_with_max_using_deque.cc
 
 ## Chapter 10. Binary Trees
     10.01 is_tree_balanced.cc
@@ -101,7 +102,7 @@
     10.14 tree_connect_leaves.cc
     10.15 tree_exterior.cc
     10.16 tree_right_sibling.cc
-    10.17 Implement locking in a binary tree: NotFound
+    10.17 [] Implement locking in a binary tree: NotFound!
 
 ## Chapter 11. Heaps
     11.01 sorted_arrays_merge.cc
@@ -111,6 +112,108 @@
     11.05 online_median.cc
     11.06 k_largest_in_heap.cc
     11.07 [] Implement a stack API using a heap: NotFound!
+
+## Chapter 12. Searching
+    12.01 search_first_key.cc
+    12.02 search_entry_equal_to_index.cc
+    12.03 search_shifted_sorted_array.cc
+    12.04 int_square_root.cc
+    12.05 real_square_root.cc
+    12.06 search_row_col_sorted_matrix.cc
+    12.07 search_for_min_max_in_array.cc
+    12.08 kth_largest_in_array.cc
+    12.09 absent_value_array.cc
+    12.10 search_for_missing_element.cc
+
+## Chapter 13. Hash Tables
+    13.00 anagrams.cc
+    13.01 is_string_permutable_to_palindrome.cc
+    13.02 is_anonymous_letter_constructible.cc
+    13.03 lru_cache.cc
+    13.04 lowest_common_ancestor_close_ancestor.cc
+    13.05 search_frequent_items.cc [?]
+    13.06 nearest_repeated_entries.cc
+    13.07 smallest_subarray_covering_set.cc
+    13.08 smallest_subarray_covering_all_values.cc
+    13.09 longest_subarray_with_distinct_values.cc
+    13.10 longest_contained_interval.cc
+    13.11 [] Compute the average of the top three scores
+    13.12 string_decompositions_into_dictionary_words.cc
+    13.13 collatz_checker.cc
+    13.14 [] Implement a hash function for chess: NotFound!
+
+## Chapter 14. Sorting
+    14.01 intersect_sorted_arrays.cc
+    14.02 two_sorted_arrays_merge.cc
+    14.03 remove_duplicates.cc
+    14.04 calendar_rendering.cc
+    14.05 interval_add.cc
+    14.06 intervals_union.cc
+    14.07 group_equal_entries.cc
+    14.08 is_array_dominated.cc
+    14.09 sort_list.cc
+    14.10 find_salary_threshold.cc
+        "C++: h_index.cc
+        "C++: smallest_nonconstructible_value.cc
+
+## Chapter 15. Binary Search Trees
+    15.00 search_in_bst.cc
+    15.01 is_tree_a_bst.cc
+    15.02 search_first_greater_value_in_bst.cc
+    15.03 k_largest_values_in_bst.cc
+    15.04 lowest_common_ancestor_in_bst.cc
+    15.05 bst_from_preorder.cc
+    15.06 minimum_distance_3_sorted_arrays.cc
+    15.07 a_b_sqrt2.cc
+
+    15.09 bst_from_sorted_array.cc
+
+    15.11 descendant_and_ancestor_in_bst.cc
+    15.12 range_lookup_in_bst.cc
+    15.13 adding_credits.cc
+
+## Chapter 16. Recursion
+    16.00 euclidean_gcd.cc
+    16.01 hanoi.cc
+    16.02 n_queens.cc
+    16.03 permutations.cc
+    16.04 power_set.cc
+    16.05 combinations.cc
+    16.06 enumerate_balanced_parentheses.cc
+    16.07 enumerate_palindromic_decompositions.cc
+    16.08 enumerate_trees.cc
+    16.09 sudoku_solve.cc
+    16.10 gray_code.cc
+    16.11 []
+
+## Chapter 17. Dynamic Programming
+    17.00 fibonacci.cc &
+          max_sum_subarray.cc
+    17.01 number_of_score_combinations.cc
+    17.02 levenshtein_distance.cc
+    17.03 number_of_traversals_matrix.cc
+    17.04 binomial_coefficients.cc
+    17.05 is_string_in_matrix.cc
+    17.06 knapsack.cc
+    17.07 is_string_decomposable_into_words.cc
+    17.08 minimum_weight_path_in_a_triangle.cc
+    17.09 picking_up_coins.cc
+    17.10 number_of_traversals_staircase.cc
+    17.11 pretty_printing.cc
+    17.12 longest_nondecreasing_subsequence.cc
+
+## Chapter 18. Greedy Algorithms and Invariants
+    18.00 making_change.cc
+    18.01 task_pairing.cc
+    18.02 minimum_waiting_time.cc
+    18.03 minimum_points_covering_intervals.cc      
+          two_sum.cc
+    18.04 three_sum.cc
+    18.05 majority_element.cc
+    18.06 refueling_schedule.cc
+    18.07 max_trapped_water.cc
+          container_with_most_water.cc
+    18.08 largest_rectangle_under_skyline.cc
 
 # Chapter 19. Graphs
     19.01 search_maze.cc
@@ -159,6 +262,7 @@
     25.33 max_submatrix.cc & max_square_submatrix.cc
     25.34 huffman_coding.cc
     25.35 max_water_trappable.cc!!
+          trapping_rainwater.cc
     25.36 [] Search for a pair-sum in an abs-sorted array: NotFound!
     25.37 search_frequent_items.cc
     25.38 longest_subarray_with_sum_constraint.cc

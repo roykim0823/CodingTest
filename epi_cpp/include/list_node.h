@@ -4,8 +4,8 @@
 #include <iostream>
 #include <memory>
 
-#include "test_framework/fmt_print.h"
-#include "test_framework/serialization_traits.h"
+#include "../test_framework/fmt_print.h"
+#include "../test_framework/serialization_traits.h"
 
 using std::make_shared;
 using std::shared_ptr;

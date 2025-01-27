@@ -3,8 +3,8 @@
 
 #include <memory>
 
-#include "test_framework/binary_tree_utils.h"
-#include "test_framework/serialization_traits.h"
+#include "../test_framework/binary_tree_utils.h"
+#include "../test_framework/serialization_traits.h"
 
 using std::unique_ptr;
 
