@@ -60,6 +60,7 @@
          delete_from_list.cc
     8.01 sorted_lists_merge.cc
     8.02 reverse_sublist.cc
+         reverse_list.cc
     8.03 is_list_cyclic.cc
     8.04 do_terminated_lists_overlap.cc
     8.05 do_lists_overlap.cc
@@ -73,6 +74,7 @@
     8.13 int_as_list_add.cc
 
 ## Chapter 9. Stacks and Queues
+    9.00 reverse_list.cc
     9.01 stack_with_max.cc
     9.02 evaluate_rpn.cc
     9.03 is_valid_parenthesization.cc
