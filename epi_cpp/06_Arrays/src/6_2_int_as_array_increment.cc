@@ -4,6 +4,11 @@
 
 using std::vector;
 
+// Brute-Force
+// convert the array of digits to the equivalent integer, increment that,
+// and then convert the resulting value back to an array of digits.
+// Problem: what if the digit length is larger than max of the int variable?
+
 vector<int> PlusOne(vector<int> A) {
   ++A.back();
   for (int i = size(A) - 1; i > 0 && A[i] == 10; --i) {
@@ -15,6 +20,10 @@ vector<int> PlusOne(vector<int> A) {
     // and update the first entry to 1.
     A[0] = 1;
     A.emplace_back(0);
+
+    // Original Code
+    // A[0] = 0;
+    // A.insert(A.begin(), 1);
   }
   return A;
 }

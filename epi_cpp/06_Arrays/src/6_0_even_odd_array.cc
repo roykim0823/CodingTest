@@ -10,6 +10,9 @@
 using std::swap;
 using std::vector;
 
+// without addition O(n) space
+// Use partition three subarrays: Even, Unclassified, and Odd
+// O(n) Time, O(1) Space
 void EvenOdd(vector<int>* A_ptr) {
   vector<int>& A = *A_ptr;
   int next_even = 0, next_odd = size(A) - 1;
@@ -17,7 +20,7 @@ void EvenOdd(vector<int>* A_ptr) {
     if (A[next_even] % 2 == 0) {
       ++next_even;
     } else {
-      swap(A[next_even], A[next_odd--]);
+      swap(A[next_even], A[next_odd--]);  // Swap not even, only decrement next_odd
     }
   }
 }

@@ -4,6 +4,7 @@
 
 using std::array;
 
+// O(1) Time, O(1) Space
 int ChangeMaking(int cents) {
   const array<int, 6> kCoins = {100, 50, 25, 10, 5, 1};
   int num_coins = 0;

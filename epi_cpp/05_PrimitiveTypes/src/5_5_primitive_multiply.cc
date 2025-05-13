@@ -1,6 +1,7 @@
 #include "test_framework/generic_test.h"
 unsigned long long Add(unsigned long long, unsigned long long);
 
+// O(n^2) since Add is O(n) time, O(1) space
 unsigned long long Multiply(unsigned long long x, unsigned long long y) {
   unsigned long long sum = 0;
   while (x) {
@@ -13,6 +14,7 @@ unsigned long long Multiply(unsigned long long x, unsigned long long y) {
   return sum;
 }
 
+// O(n) time, O(1) space
 unsigned long long Add(unsigned long long a, unsigned long long b) {
   while (b) {
     unsigned long long carry = a & b;

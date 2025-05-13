@@ -11,6 +11,29 @@ using std::vector;
 
 enum class Color { kRed, kWhite, kBlue };
 
+// Solution 1: Counting Sort, O(n), but 2 passes
+
+// Solution 2: Two Passes Approach
+void DutchFlagPartition2(int pivot_index, vector<Color> *A_ptr) {
+  vector<Color> &A = *A_ptr;
+  Color pivot = A[pivot_index];
+
+  // First pass: group elements smaller than pivot, O(n), S(1)
+  int smaller = 0;
+  for (int i = 0; i < A.size(); ++i) {
+    if (A[i] < pivot) {
+      swap(A[i], A[smaller++]);
+    }
+  }
+
+  // Second pass: group elements larger than pivot.
+  int larger = A.size() - 1;
+  for (int i = A.size() - 1; i >= 0 && A[i] >= pivot; --i) {
+    if (A[i] > pivot) {
+      swap(A[i], A[larger--]);
+    }
+  }
+}
 void DutchFlagPartition(int pivot_index, vector<Color>* A_ptr) {
   vector<Color>& A = *A_ptr;
   Color pivot = A[pivot_index];
