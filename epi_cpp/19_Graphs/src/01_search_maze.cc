@@ -37,13 +37,18 @@ bool SearchMazeHelper(const Coordinate& cur, const Coordinate& e,
                       vector<Coordinate>* path_ptr) {
   auto& maze = *maze_ptr;
   // Checks cur is within maze and is a white pixel.
-  if (cur.x < 0 || cur.x >= size(maze) || cur.y < 0 ||
-      cur.y >= size(maze[cur.x]) || maze[cur.x][cur.y] != Color::kWhite) {
+  // if (cur.x < 0 || cur.x >= size(maze) || cur.y < 0 ||
+  //     cur.y >= size(maze[cur.x]) || maze[cur.x][cur.y] != Color::kWhite) {
+  //   return false;
+  // }
+  if (!IsFeasible(cur, maze)) {
     return false;
   }
+
+
   auto& path = *path_ptr;
   path.emplace_back(cur);
-  maze[cur.x][cur.y] = Color::kBlack;
+  maze[cur.x][cur.y] = Color::kBlack;  // effective of visited node
   if (cur == e) {
     return true;
   }
@@ -61,6 +66,13 @@ bool SearchMazeHelper(const Coordinate& cur, const Coordinate& e,
   return false;
 }
 
+// Check cur is within maze and is a while pixel
+bool IsFeasible(const Coordinate& cur, const vector<vector<Color>>& maze) {
+  return cur.x >= 0 && cur.x < maze.size() && cur.y >= 0 && cur.y < maze[cur.x].size() &&
+         maze[cur.x][cur.y] == Color::kWhite;
+}
+
+
 namespace test_framework {
 template <>
 struct SerializationTrait<Color> : SerializationTrait<int> {
@@ -71,8 +83,9 @@ struct SerializationTrait<Color> : SerializationTrait<int> {
         SerializationTrait<int>::Parse(json_object));
   }
 };
-}  // namespace test_framework
+}  
 
+// namespace test_framework
 namespace test_framework {
 template <>
 struct SerializationTrait<Coordinate> : UserSerTrait<Coordinate, int, int> {
@@ -90,6 +103,7 @@ bool PathElementIsFeasible(const vector<vector<Color>>& maze,
         cur.y < maze[cur.x].size() && maze[cur.x][cur.y] == Color::kWhite)) {
     return false;
   }
+  // return false for wrong movement like (+1, +1), this is a result
   return cur == Coordinate{prev.x + 1, prev.y} ||
          cur == Coordinate{prev.x - 1, prev.y} ||
          cur == Coordinate{prev.x, prev.y + 1} ||
