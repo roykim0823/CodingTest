@@ -13,12 +13,13 @@ using std::pair;
 using std::queue;
 using std::vector;
 
+// Simple BFS solutions.
 void FlipColor(int x, int y, vector<deque<bool>>* image_ptr) {
   vector<deque<bool>>& image = *image_ptr;
   const bool color = image[x][y];
 
   queue<pair<int, int>> q;
-  image[x][y] = !color;  // Flips.
+  image[x][y] = !color;  // Flips. -> Act as a visited
   q.emplace(x, y);
   while (!empty(q)) {
     const auto [x, y] = q.front();

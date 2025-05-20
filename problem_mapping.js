@@ -84,7 +84,6 @@ problem_mapping = {
                 "total": 10006
             }
         },
-
         "5.06 Compute quotient without arithmetical operators": {
             "C++: primitive_divide.cc": {
                 "passed": 0,
@@ -213,7 +212,6 @@ problem_mapping = {
                 "total": 505
             }
         },
-
         "6.03 Multiply two arbitrary-precision integers": {
             "C++: int_as_array_multiply.cc": {
                 "passed": 0,
@@ -467,190 +465,6 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 07: Strings": {
-        "7.00 Bootcamp: Strings": {
-            "C++: is_string_palindromic.cc": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Java: IsStringPalindromic.java": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Python: is_string_palindromic.py": {
-                "passed": 0,
-                "total": 10000
-            }
-        },
-        "6.01 Interconvert strings and integers": {
-            "C++: string_integer_interconversion.cc": {
-                "passed": 0,
-                "total": 15002
-            },
-            "Java: StringIntegerInterconversion.java": {
-                "passed": 0,
-                "total": 15002
-            },
-            "Python: string_integer_interconversion.py": {
-                "passed": 0,
-                "total": 15002
-            }
-        },
-        "6.02 Base conversion": {
-            "C++: convert_base.cc": {
-                "passed": 0,
-                "total": 20001
-            },
-            "Java: ConvertBase.java": {
-                "passed": 0,
-                "total": 20001
-            },
-            "Python: convert_base.py": {
-                "passed": 0,
-                "total": 20001
-            }
-        },
-        "6.03 Compute the spreadsheet column encoding": {
-            "C++: spreadsheet_encoding.cc": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Java: SpreadsheetEncoding.java": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Python: spreadsheet_encoding.py": {
-                "passed": 0,
-                "total": 10000
-            }
-        },
-        "6.04 Replace and remove": {
-            "C++: replace_and_remove.cc": {
-                "passed": 0,
-                "total": 501
-            },
-            "Java: ReplaceAndRemove.java": {
-                "passed": 0,
-                "total": 501
-            },
-            "Python: replace_and_remove.py": {
-                "passed": 0,
-                "total": 501
-            }
-        },
-        "6.05 Test palindromicity": {
-            "C++: is_string_palindromic_punctuation.cc": {
-                "passed": 0,
-                "total": 305
-            },
-            "Java: IsStringPalindromicPunctuation.java": {
-                "passed": 0,
-                "total": 305
-            },
-            "Python: is_string_palindromic_punctuation.py": {
-                "passed": 0,
-                "total": 305
-            }
-        },
-        "6.06 Reverse all the words in a sentence": {
-            "C++: reverse_words.cc": {
-                "passed": 0,
-                "total": 103
-            },
-            "Java: ReverseWords.java": {
-                "passed": 0,
-                "total": 103
-            },
-            "Python: reverse_words.py": {
-                "passed": 0,
-                "total": 103
-            }
-        },
-        "6.07 The look-and-say problem": {
-            "C++: look_and_say.cc": {
-                "passed": 0,
-                "total": 40
-            },
-            "Java: LookAndSay.java": {
-                "passed": 0,
-                "total": 40
-            },
-            "Python: look_and_say.py": {
-                "passed": 0,
-                "total": 40
-            }
-        },
-        "6.08 Convert from Roman to decimal": {
-            "C++: roman_to_integer.cc": {
-                "passed": 0,
-                "total": 3999
-            },
-            "Java: RomanToInteger.java": {
-                "passed": 0,
-                "total": 3999
-            },
-            "Python: roman_to_integer.py": {
-                "passed": 0,
-                "total": 3999
-            }
-        },
-        "6.09 Compute all valid IP addresses": {
-            "C++: valid_ip_addresses.cc": {
-                "passed": 0,
-                "total": 10008
-            },
-            "Java: ValidIpAddresses.java": {
-                "passed": 0,
-                "total": 10008
-            },
-            "Python: valid_ip_addresses.py": {
-                "passed": 0,
-                "total": 10008
-            }
-        },
-        "6.10 Write a string sinusoidally": {
-            "C++: snake_string.cc": {
-                "passed": 0,
-                "total": 500
-            },
-            "Java: SnakeString.java": {
-                "passed": 0,
-                "total": 500
-            },
-            "Python: snake_string.py": {
-                "passed": 0,
-                "total": 500
-            }
-        },
-        "6.11 Implement run-length encoding": {
-            "C++: run_length_compression.cc": {
-                "passed": 0,
-                "total": 200
-            },
-            "Java: RunLengthCompression.java": {
-                "passed": 0,
-                "total": 200
-            },
-            "Python: run_length_compression.py": {
-                "passed": 0,
-                "total": 200
-            }
-        },
-        "6.12 Find the first occurrence of a substring": {
-            "C++: substring_match.cc": {
-                "passed": 0,
-                "total": 835
-            },
-            "Java: SubstringMatch.java": {
-                "passed": 0,
-                "total": 835
-            },
-            "Python: substring_match.py": {
-                "passed": 0,
-                "total": 835
-            }
-        }
-    },
     "Chapter 07: Linked Lists": {
         "7.00 Bootcamp: Linked Lists": {
             "C++: delete_from_list.cc": {
@@ -870,6 +684,190 @@ problem_mapping = {
             "Python: int_as_list_add.py": {
                 "passed": 0,
                 "total": 2002
+            }
+        }
+    },
+    "Chapter 07: Strings": {
+        "6.01 Interconvert strings and integers": {
+            "C++: string_integer_interconversion.cc": {
+                "passed": 0,
+                "total": 15002
+            },
+            "Java: StringIntegerInterconversion.java": {
+                "passed": 0,
+                "total": 15002
+            },
+            "Python: string_integer_interconversion.py": {
+                "passed": 0,
+                "total": 15002
+            }
+        },
+        "6.02 Base conversion": {
+            "C++: convert_base.cc": {
+                "passed": 0,
+                "total": 20001
+            },
+            "Java: ConvertBase.java": {
+                "passed": 0,
+                "total": 20001
+            },
+            "Python: convert_base.py": {
+                "passed": 0,
+                "total": 20001
+            }
+        },
+        "6.03 Compute the spreadsheet column encoding": {
+            "C++: spreadsheet_encoding.cc": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Java: SpreadsheetEncoding.java": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Python: spreadsheet_encoding.py": {
+                "passed": 0,
+                "total": 10000
+            }
+        },
+        "6.04 Replace and remove": {
+            "C++: replace_and_remove.cc": {
+                "passed": 0,
+                "total": 501
+            },
+            "Java: ReplaceAndRemove.java": {
+                "passed": 0,
+                "total": 501
+            },
+            "Python: replace_and_remove.py": {
+                "passed": 0,
+                "total": 501
+            }
+        },
+        "6.05 Test palindromicity": {
+            "C++: is_string_palindromic_punctuation.cc": {
+                "passed": 0,
+                "total": 305
+            },
+            "Java: IsStringPalindromicPunctuation.java": {
+                "passed": 0,
+                "total": 305
+            },
+            "Python: is_string_palindromic_punctuation.py": {
+                "passed": 0,
+                "total": 305
+            }
+        },
+        "6.06 Reverse all the words in a sentence": {
+            "C++: reverse_words.cc": {
+                "passed": 0,
+                "total": 103
+            },
+            "Java: ReverseWords.java": {
+                "passed": 0,
+                "total": 103
+            },
+            "Python: reverse_words.py": {
+                "passed": 0,
+                "total": 103
+            }
+        },
+        "6.07 The look-and-say problem": {
+            "C++: look_and_say.cc": {
+                "passed": 0,
+                "total": 40
+            },
+            "Java: LookAndSay.java": {
+                "passed": 0,
+                "total": 40
+            },
+            "Python: look_and_say.py": {
+                "passed": 0,
+                "total": 40
+            }
+        },
+        "6.08 Convert from Roman to decimal": {
+            "C++: roman_to_integer.cc": {
+                "passed": 0,
+                "total": 3999
+            },
+            "Java: RomanToInteger.java": {
+                "passed": 0,
+                "total": 3999
+            },
+            "Python: roman_to_integer.py": {
+                "passed": 0,
+                "total": 3999
+            }
+        },
+        "6.09 Compute all valid IP addresses": {
+            "C++: valid_ip_addresses.cc": {
+                "passed": 0,
+                "total": 10008
+            },
+            "Java: ValidIpAddresses.java": {
+                "passed": 0,
+                "total": 10008
+            },
+            "Python: valid_ip_addresses.py": {
+                "passed": 0,
+                "total": 10008
+            }
+        },
+        "6.10 Write a string sinusoidally": {
+            "C++: snake_string.cc": {
+                "passed": 0,
+                "total": 500
+            },
+            "Java: SnakeString.java": {
+                "passed": 0,
+                "total": 500
+            },
+            "Python: snake_string.py": {
+                "passed": 0,
+                "total": 500
+            }
+        },
+        "6.11 Implement run-length encoding": {
+            "C++: run_length_compression.cc": {
+                "passed": 0,
+                "total": 200
+            },
+            "Java: RunLengthCompression.java": {
+                "passed": 0,
+                "total": 200
+            },
+            "Python: run_length_compression.py": {
+                "passed": 0,
+                "total": 200
+            }
+        },
+        "6.12 Find the first occurrence of a substring": {
+            "C++: substring_match.cc": {
+                "passed": 0,
+                "total": 835
+            },
+            "Java: SubstringMatch.java": {
+                "passed": 0,
+                "total": 835
+            },
+            "Python: substring_match.py": {
+                "passed": 0,
+                "total": 835
+            }
+        },
+        "7.00 Bootcamp: Strings": {
+            "C++: is_string_palindromic.cc": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Java: IsStringPalindromic.java": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Python: is_string_palindromic.py": {
+                "passed": 0,
+                "total": 10000
             }
         }
     },
@@ -2415,13 +2413,13 @@ problem_mapping = {
             }
         },
         "18.07 Compute the maximum water trapped by a pair of vertical lines": {
-            "C++: max_trapped_water.cc": {
-                "passed": 0,
-                "total": 204
-            },
             "C++: container_with_most_water.cc": {
                 "passed": 7,
                 "total": 7
+            },
+            "C++: max_trapped_water.cc": {
+                "passed": 0,
+                "total": 204
             },
             "Java: MaxTrappedWater.java": {
                 "passed": 0,
@@ -2447,50 +2445,8 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 18: Graphs": {
-        "18.01 Search a maze": {
-            "C++: search_maze.cc": {
-                "passed": 0,
-                "total": 101
-            },
-            "Java: SearchMaze.java": {
-                "passed": 0,
-                "total": 101
-            },
-            "Python: search_maze.py": {
-                "passed": 0,
-                "total": 101
-            }
-        },
-        "18.02 Paint a Boolean matrix": {
-            "C++: matrix_connected_regions.cc": {
-                "passed": 0,
-                "total": 50
-            },
-            "Java: MatrixConnectedRegions.java": {
-                "passed": 0,
-                "total": 50
-            },
-            "Python: matrix_connected_regions.py": {
-                "passed": 0,
-                "total": 50
-            }
-        },
-        "18.03 Compute enclosed regions": {
-            "C++: matrix_enclosed_regions.cc": {
-                "passed": 0,
-                "total": 51
-            },
-            "Java: MatrixEnclosedRegions.java": {
-                "passed": 0,
-                "total": 51
-            },
-            "Python: matrix_enclosed_regions.py": {
-                "passed": 0,
-                "total": 51
-            }
-        },
-        "18.04 Deadlock detection": {
+    "Chapter 19: Graphs": {
+        "19.04 Deadlock detection": {
             "C++: deadlock_detection.cc": {
                 "passed": 71,
                 "total": 71
@@ -2504,7 +2460,7 @@ problem_mapping = {
                 "total": 71
             }
         },
-        "18.05 Clone a graph": {
+        "19.05 Clone a graph": {
             "C++: graph_clone.cc": {
                 "passed": 0,
                 "total": 91
@@ -2518,7 +2474,7 @@ problem_mapping = {
                 "total": 91
             }
         },
-        "18.06 Making wired connections": {
+        "19.06 Making wired connections": {
             "C++: is_circuit_wirable.cc": {
                 "passed": 0,
                 "total": 85
@@ -2532,7 +2488,7 @@ problem_mapping = {
                 "total": 85
             }
         },
-        "18.07 Transform one string to another": {
+        "19.07 Transform one string to another": {
             "C++: string_transformability.cc": {
                 "passed": 0,
                 "total": 48
@@ -2546,7 +2502,7 @@ problem_mapping = {
                 "total": 48
             }
         },
-        "18.08 Team photo day---2": {
+        "19.08 Team photo day---2": {
             "C++: max_teams_in_photograph.cc": {
                 "passed": 0,
                 "total": 69
@@ -2558,6 +2514,48 @@ problem_mapping = {
             "Python: max_teams_in_photograph.py": {
                 "passed": 0,
                 "total": 69
+            }
+        },
+        "19.01 Search a maze": {
+            "C++: search_maze.cc": {
+                "passed": 101,
+                "total": 101
+            },
+            "Java: SearchMaze.java": {
+                "passed": 0,
+                "total": 101
+            },
+            "Python: search_maze.py": {
+                "passed": 0,
+                "total": 101
+            }
+        },
+        "19.02 Paint a Boolean matrix": {
+            "C++: matrix_connected_regions.cc": {
+                "passed": 0,
+                "total": 50
+            },
+            "Java: MatrixConnectedRegions.java": {
+                "passed": 0,
+                "total": 50
+            },
+            "Python: matrix_connected_regions.py": {
+                "passed": 0,
+                "total": 50
+            }
+        },
+        "19.03 Compute enclosed regions": {
+            "C++: matrix_enclosed_regions.cc": {
+                "passed": 51,
+                "total": 51
+            },
+            "Java: MatrixEnclosedRegions.java": {
+                "passed": 0,
+                "total": 51
+            },
+            "Python: matrix_enclosed_regions.py": {
+                "passed": 0,
+                "total": 51
             }
         }
     },
@@ -2994,24 +2992,6 @@ problem_mapping = {
                 "total": 11
             }
         },
-        "25.31 Trapping water": {
-            "C++: max_water_trappable.cc": {
-                "passed": 0,
-                "total": 1001
-            },
-            "C++: trapping_rainwater.cc": {
-                "passed": 7,
-                "total": 7
-            },
-            "Java: MaxWaterTrappable.java": {
-                "passed": 0,
-                "total": 1001
-            },
-            "Python: max_water_trappable.py": {
-                "passed": 0,
-                "total": 1001
-            }
-        },
         "24.32 The heavy hitter problem": {
             "C++: search_frequent_items.cc": {
                 "passed": 0,
@@ -3066,6 +3046,24 @@ problem_mapping = {
             "Python: arbitrage.py": {
                 "passed": 0,
                 "total": 201
+            }
+        },
+        "25.31 Trapping water": {
+            "C++: max_water_trappable.cc": {
+                "passed": 0,
+                "total": 1001
+            },
+            "C++: trapping_rainwater.cc": {
+                "passed": 7,
+                "total": 7
+            },
+            "Java: MaxWaterTrappable.java": {
+                "passed": 0,
+                "total": 1001
+            },
+            "Python: max_water_trappable.py": {
+                "passed": 0,
+                "total": 1001
             }
         }
     }

@@ -19,6 +19,8 @@ struct GraphVertex {
   vector<GraphVertex*> edges;
 };
 
+
+// Bipartite (Two-color) problem
 bool IsAnyPlacementFeasible(vector<GraphVertex>* graph) {
   return all_of(begin(*graph), end(*graph),
                 [](GraphVertex& v) { return v.d != -1 || Bfs(&v); });
@@ -34,7 +36,7 @@ bool Bfs(GraphVertex* s) {
       if (t->d == -1) {  // Unvisited vertex.
         t->d = q.front()->d + 1;
         q.emplace(t);
-      } else if (t->d == q.front()->d) {
+      } else if (t->d == q.front()->d) {  // Same distance implies the same color
         return false;
       }
     }

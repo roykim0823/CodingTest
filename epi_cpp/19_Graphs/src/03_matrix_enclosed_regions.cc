@@ -16,6 +16,7 @@ using std::vector;
 
 void MarkBoundaryRegion(int, int, vector<vector<char>>*);
 
+// Board is filled by W, B
 void FillSurroundedRegions(vector<vector<char>>* board_ptr) {
   vector<vector<char>>& board = *board_ptr;
   // Identifies the regions that are reachable via white path starting from

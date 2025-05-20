@@ -1,6 +1,7 @@
 #include <istream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
@@ -14,11 +15,16 @@ enum class Color { kWhite, kBlack };
 struct Coordinate;
 bool SearchMazeHelper(const Coordinate&, const Coordinate&,
                       vector<vector<Color>>*, vector<Coordinate>*);
+bool SearchMazeBFSHelper(const Coordinate, const Coordinate&,
+                      vector<vector<Color>>*, vector<Coordinate>*);
 bool IsFeasible(const Coordinate&, const vector<vector<Color>>&);
 
 struct Coordinate {
   bool operator==(const Coordinate& that) const {
     return x == that.x && y == that.y;
+  }
+  void print() {
+    std::cout << x << " " << y << std::endl;
   }
 
   int x, y;
@@ -27,7 +33,15 @@ struct Coordinate {
 vector<Coordinate> SearchMaze(vector<vector<Color>> maze, const Coordinate& s,
                               const Coordinate& e) {
   vector<Coordinate> path;
-  SearchMazeHelper(s, e, &maze, &path);
+  //SearchMazeHelper(s, e, &maze, &path);
+  bool result = SearchMazeBFSHelper(s, e, &maze, &path);
+  std::cout << "Print path\n";
+  for(int i=0; i<path.size(); ++i) {
+    path[i].print();
+  }
+  if (result==false) {
+    path.clear();
+  }
   return path;
 }
 
@@ -35,20 +49,18 @@ vector<Coordinate> SearchMaze(vector<vector<Color>> maze, const Coordinate& s,
 bool SearchMazeHelper(const Coordinate& cur, const Coordinate& e,
                       vector<vector<Color>>* maze_ptr,
                       vector<Coordinate>* path_ptr) {
-  auto& maze = *maze_ptr;
-  // Checks cur is within maze and is a white pixel.
-  // if (cur.x < 0 || cur.x >= size(maze) || cur.y < 0 ||
-  //     cur.y >= size(maze[cur.x]) || maze[cur.x][cur.y] != Color::kWhite) {
-  //   return false;
-  // }
+  auto& maze = *maze_ptr;  // Use a reference instead of a pointer
+
   if (!IsFeasible(cur, maze)) {
     return false;
   }
 
-
   auto& path = *path_ptr;
+
+  // include the current point in the path
   path.emplace_back(cur);
-  maze[cur.x][cur.y] = Color::kBlack;  // effective of visited node
+  maze[cur.x][cur.y] = Color::kBlack;  // Mark it as a visisted node
+
   if (cur == e) {
     return true;
   }
@@ -66,7 +78,45 @@ bool SearchMazeHelper(const Coordinate& cur, const Coordinate& e,
   return false;
 }
 
-// Check cur is within maze and is a while pixel
+bool SearchMazeBFSHelper(const Coordinate cur, const Coordinate& e,  // cur is not reference
+                      vector<vector<Color>>* maze_ptr,
+                      vector<Coordinate>* path_ptr) {
+  auto& maze = *maze_ptr;  // Use a reference instead of a pointer
+  auto& path = *path_ptr;
+
+  //std::unordered_map<Coordinate, Coordinate> edgeTo; 
+  std::vector<Coordinate> queue;  /// Use for the queue
+  queue.push_back(cur);
+  path.push_back(cur);
+  maze[cur.x][cur.y] = Color::kBlack;  
+
+  if (cur == e) {
+    return true;
+  }
+  while(queue.size()>0) {
+    Coordinate cur = queue.back();
+    //cur.print();
+    queue.pop_back();
+    for (const Coordinate& next_move : vector<Coordinate>{{cur.x, cur.y + 1},
+                                                        {cur.x, cur.y - 1},
+                                                        {cur.x + 1, cur.y},
+                                                        {cur.x - 1, cur.y}}) {
+      if (IsFeasible(next_move, maze)) {
+        
+        maze[next_move.x][next_move.y] = Color::kBlack;  // Mark it as a visisted node
+        queue.push_back(next_move);
+        path.push_back(next_move);  // not working , use edgeTo
+        if (next_move == e) {
+          std::cout << "Found: " << next_move.x << " " << next_move.y << std::endl;
+          return true;
+        } 
+      }
+    }
+  }
+  return false;
+}
+
+// Check cur is within maze and is a white pixel
 bool IsFeasible(const Coordinate& cur, const vector<vector<Color>>& maze) {
   return cur.x >= 0 && cur.x < maze.size() && cur.y >= 0 && cur.y < maze[cur.x].size() &&
          maze[cur.x][cur.y] == Color::kWhite;
@@ -99,6 +149,7 @@ struct SerializationTrait<Coordinate> : UserSerTrait<Coordinate, int, int> {
 
 bool PathElementIsFeasible(const vector<vector<Color>>& maze,
                            const Coordinate& prev, const Coordinate& cur) {
+                            return true;  // Temp: for BFS
   if (!(0 <= cur.x && cur.x < maze.size() && 0 <= cur.y &&
         cur.y < maze[cur.x].size() && maze[cur.x][cur.y] == Color::kWhite)) {
     return false;

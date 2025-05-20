@@ -33,7 +33,7 @@ int TransformString(unordered_set<string> D, const string& s, const string& t) {
       for (char c = 'a'; c <= 'z'; ++c) {  // Iterates through 'a' ~ 'z'.
         str[i] = c;
         if (auto it = D.find(str); it != end(D)) {
-          D.erase(it);
+          D.erase(it);  // Mask s as visisted by erasing it in D.
           q.emplace(StringWithDistance{str, f.distance + 1});
         }
       }
