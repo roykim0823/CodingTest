@@ -20,6 +20,7 @@ struct GraphVertex {
   vector<GraphVertex*> edges;
 };
 
+// BFS based, Time: O(|V| + |E|), Space: O(|V|+|E|)
 GraphVertex* CloneGraph(GraphVertex* graph) {
   if (!graph) {
     return nullptr;

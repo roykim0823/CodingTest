@@ -40,6 +40,7 @@ void FillSurroundedRegions(vector<vector<char>>* board_ptr) {
   }
 }
 
+// Time O(mn)
 void MarkBoundaryRegion(int i, int j, vector<vector<char>>* board_ptr) {
   queue<pair<int, int>> q(deque<pair<int, int>>(1, {i, j}));
   vector<vector<char>>& board = *board_ptr;
@@ -49,7 +50,7 @@ void MarkBoundaryRegion(int i, int j, vector<vector<char>>* board_ptr) {
     q.pop();
     if (x >= 0 && x < size(board) && y >= 0 && y < size(board[x]) &&
         board[x][y] == 'W') {
-      board[x][y] = 'T';
+      board[x][y] = 'T';  // Mark any reachable White
       q.emplace(x - 1, y);
       q.emplace(x + 1, y);
       q.emplace(x, y + 1);

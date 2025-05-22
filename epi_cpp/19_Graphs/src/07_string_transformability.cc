@@ -10,18 +10,21 @@ using std::string;
 using std::unordered_set;
 
 // Uses BFS to find the least steps of transformation.
-
+// Time: O(d+d^2 => d^2), d is the number of words in the dictionary
+// Time: O(nd) if the string length is n < d
 int TransformString(unordered_set<string> D, const string& s, const string& t) {
   struct StringWithDistance {
     string candidate_string;
     int distance;
   };
+
   queue<StringWithDistance> q;
   D.erase(s);  // Marks s as visited by erasing it in D.
   q.emplace(StringWithDistance{s, 0});
 
   while (!empty(q)) {
     StringWithDistance f(q.front());
+
     // Returns if we find a match.
     if (f.candidate_string == t) {
       return f.distance;  // Number of steps reaches t.

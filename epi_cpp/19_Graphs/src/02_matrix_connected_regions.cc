@@ -13,6 +13,7 @@ using std::pair;
 using std::queue;
 using std::vector;
 
+// Time O(mn), Space O(m+n)
 // Simple BFS solutions.
 void FlipColor(int x, int y, vector<deque<bool>>* image_ptr) {
   vector<deque<bool>>& image = *image_ptr;

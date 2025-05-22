@@ -12,6 +12,8 @@ using std::make_unique;
 using std::max;
 using std::vector;
 
+// TEAM PHOTO DAY-2
+
 struct GraphVertex;
 int Dfs(GraphVertex* curr);
 
@@ -21,10 +23,11 @@ struct GraphVertex {
   int max_distance = 0;
 };
 
+// Time: O(|V|+|E|), V=teams, E= the connection depends on the height of players
 int FindLargestNumberTeams(vector<GraphVertex>* graph) {
   int max_level = 0;
   for (GraphVertex& g : *graph) {
-    if (g.max_distance == 0) {
+    if (g.max_distance == 0) {  // not visisted
       max_level = max(max_level, Dfs(&g));
     }
   }

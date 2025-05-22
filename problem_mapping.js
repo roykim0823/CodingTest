@@ -2446,6 +2446,48 @@ problem_mapping = {
         }
     },
     "Chapter 19: Graphs": {
+        "19.01 Search a maze": {
+            "C++: search_maze.cc": {
+                "passed": 101,
+                "total": 101
+            },
+            "Java: SearchMaze.java": {
+                "passed": 0,
+                "total": 101
+            },
+            "Python: search_maze.py": {
+                "passed": 0,
+                "total": 101
+            }
+        },
+        "19.02 Paint a Boolean matrix": {
+            "C++: matrix_connected_regions.cc": {
+                "passed": 0,
+                "total": 50
+            },
+            "Java: MatrixConnectedRegions.java": {
+                "passed": 0,
+                "total": 50
+            },
+            "Python: matrix_connected_regions.py": {
+                "passed": 0,
+                "total": 50
+            }
+        },
+        "19.03 Compute enclosed regions": {
+            "C++: matrix_enclosed_regions.cc": {
+                "passed": 51,
+                "total": 51
+            },
+            "Java: MatrixEnclosedRegions.java": {
+                "passed": 0,
+                "total": 51
+            },
+            "Python: matrix_enclosed_regions.py": {
+                "passed": 0,
+                "total": 51
+            }
+        },
         "19.04 Deadlock detection": {
             "C++: deadlock_detection.cc": {
                 "passed": 71,
@@ -2504,7 +2546,7 @@ problem_mapping = {
         },
         "19.08 Team photo day---2": {
             "C++: max_teams_in_photograph.cc": {
-                "passed": 0,
+                "passed": 69,
                 "total": 69
             },
             "Java: MaxTeamsInPhotograph.java": {
@@ -2514,48 +2556,6 @@ problem_mapping = {
             "Python: max_teams_in_photograph.py": {
                 "passed": 0,
                 "total": 69
-            }
-        },
-        "19.01 Search a maze": {
-            "C++: search_maze.cc": {
-                "passed": 101,
-                "total": 101
-            },
-            "Java: SearchMaze.java": {
-                "passed": 0,
-                "total": 101
-            },
-            "Python: search_maze.py": {
-                "passed": 0,
-                "total": 101
-            }
-        },
-        "19.02 Paint a Boolean matrix": {
-            "C++: matrix_connected_regions.cc": {
-                "passed": 0,
-                "total": 50
-            },
-            "Java: MatrixConnectedRegions.java": {
-                "passed": 0,
-                "total": 50
-            },
-            "Python: matrix_connected_regions.py": {
-                "passed": 0,
-                "total": 50
-            }
-        },
-        "19.03 Compute enclosed regions": {
-            "C++: matrix_enclosed_regions.cc": {
-                "passed": 51,
-                "total": 51
-            },
-            "Java: MatrixEnclosedRegions.java": {
-                "passed": 0,
-                "total": 51
-            },
-            "Python: matrix_enclosed_regions.py": {
-                "passed": 0,
-                "total": 51
             }
         }
     },

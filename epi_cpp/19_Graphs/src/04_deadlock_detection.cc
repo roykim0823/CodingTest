@@ -22,6 +22,7 @@ bool IsDeadlocked(vector<GraphVertex>* graph) {
   });
 }
 
+// Time: O(|V| + |E|)
 bool HasCycle(GraphVertex* cur) {
   // Visiting a gray vertex means a cycle.
   if (cur->color == GraphVertex::Color::kGray) {
@@ -36,7 +37,7 @@ bool HasCycle(GraphVertex* cur) {
       return true;
     }
   }
-  cur->color = GraphVertex::Color::kBlack;  // Marks current vertex as black.
+  cur->color = GraphVertex::Color::kBlack;  // Marks current vertex as black when it is processed.
   return false;
 }
 
