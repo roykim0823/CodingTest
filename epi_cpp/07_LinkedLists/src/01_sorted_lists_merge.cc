@@ -20,9 +20,10 @@ shared_ptr<ListNode<int>> MergeTwoSortedLists(shared_ptr<ListNode<int>> L1,
 
 void AppendNode(shared_ptr<ListNode<int>> *node,
                 shared_ptr<ListNode<int>> *tail) {
-  (*tail)->next = *node;
-  *tail = *node;  // Updates tail.
-  *node = (*node)->next;
+  (*tail)->next = *node;  // connect new node
+
+  *tail = *node;          // Updates tail to point new node.
+  *node = (*node)->next;  // move the L1 or L2 to its next item.
 }
 
 int main(int argc, char *argv[]) {

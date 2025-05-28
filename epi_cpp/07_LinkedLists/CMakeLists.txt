@@ -3,7 +3,7 @@ project(08)
 
 set(CMAKE_CXX_FLAGS "-std=c++1z -g -Wall")
 
-include_directories(include)
+include_directories(../include)
 file(GLOB SRCS "src/*.cc")
 
 foreach(src IN LISTS SRCS) 
