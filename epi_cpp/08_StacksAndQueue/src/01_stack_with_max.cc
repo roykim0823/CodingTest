@@ -10,11 +10,16 @@ using std::length_error;
 using std::max;
 using std::stack;
 
+// MAX, Time: O(1), Space: O(n)
 class Stack {
  public:
-  bool Empty() const { return empty(element_with_cached_max_); }
+  bool Empty() const { 
+    return element_with_cached_max_.empty(); 
+  }
 
-  int Max() const { return element_with_cached_max_.top().max; }
+  int Max() const { 
+    return element_with_cached_max_.top().max; 
+  }
 
   int Pop() {
     int pop_element = element_with_cached_max_.top().element;
@@ -29,11 +34,13 @@ class Stack {
 
  private:
   struct ElementWithCachedMax {
-    int element, max;
+    int element, max;  // keep the current max value
   };
   stack<ElementWithCachedMax> element_with_cached_max_;
 };
 
+
+// Test Code
 struct StackOp {
   std::string op;
   int argument;

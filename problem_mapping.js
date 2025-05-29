@@ -687,7 +687,7 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 07: Strings": {
+    "Chapter 06: Strings": {
         "6.01 Interconvert strings and integers": {
             "C++: string_integer_interconversion.cc": {
                 "passed": 0,
@@ -856,7 +856,7 @@ problem_mapping = {
                 "total": 835
             }
         },
-        "7.00 Bootcamp: Strings": {
+        "6.00 Bootcamp: Strings": {
             "C++: is_string_palindromic.cc": {
                 "passed": 0,
                 "total": 10000
@@ -874,7 +874,7 @@ problem_mapping = {
     "Chapter 08: Stacks and Queues": {
         "8.01 Implement a stack with max API": {
             "C++: stack_with_max.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: StackWithMax.java": {
@@ -2301,8 +2301,8 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 18: Greedy Algorithms and Invariants": {
-        "18.00 Bootcamp: Greedy Algorithms and Invariants": {
+    "Chapter 17: Greedy Algorithms and Invariants": {
+        "17.00 Bootcamp: Greedy Algorithms and Invariants": {
             "C++: making_change.cc": {
                 "passed": 0,
                 "total": 49999
@@ -2316,7 +2316,7 @@ problem_mapping = {
                 "total": 49999
             }
         },
-        "18.01 Compute an optimum assignment of tasks": {
+        "17.01 Compute an optimum assignment of tasks": {
             "C++: task_pairing.cc": {
                 "passed": 0,
                 "total": 500
@@ -2330,7 +2330,7 @@ problem_mapping = {
                 "total": 500
             }
         },
-        "18.02 Schedule to minimize waiting time": {
+        "17.02 Schedule to minimize waiting time": {
             "C++: minimum_waiting_time.cc": {
                 "passed": 0,
                 "total": 501
@@ -2344,7 +2344,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "18.03 The interval covering problem": {
+        "17.03 The interval covering problem": {
             "C++: minimum_points_covering_intervals.cc": {
                 "passed": 0,
                 "total": 103
@@ -2370,7 +2370,7 @@ problem_mapping = {
                 "total": 1005
             }
         },
-        "18.04 The 3-sum problem": {
+        "17.04 The 3-sum problem": {
             "C++: three_sum.cc": {
                 "passed": 0,
                 "total": 1008
@@ -2384,7 +2384,7 @@ problem_mapping = {
                 "total": 1008
             }
         },
-        "18.05 Find the majority element": {
+        "17.05 Find the majority element": {
             "C++: majority_element.cc": {
                 "passed": 0,
                 "total": 201
@@ -2398,7 +2398,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "18.06 The gasup problem": {
+        "17.06 The gasup problem": {
             "C++: refueling_schedule.cc": {
                 "passed": 0,
                 "total": 202
@@ -2412,7 +2412,7 @@ problem_mapping = {
                 "total": 202
             }
         },
-        "18.07 Compute the maximum water trapped by a pair of vertical lines": {
+        "17.07 Compute the maximum water trapped by a pair of vertical lines": {
             "C++: container_with_most_water.cc": {
                 "passed": 7,
                 "total": 7
@@ -2430,7 +2430,7 @@ problem_mapping = {
                 "total": 204
             }
         },
-        "18.08 Compute the largest rectangle under the skyline": {
+        "17.08 Compute the largest rectangle under the skyline": {
             "C++: largest_rectangle_under_skyline.cc": {
                 "passed": 0,
                 "total": 1004
@@ -2445,8 +2445,8 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 19: Graphs": {
-        "19.01 Search a maze": {
+    "Chapter 18: Graphs": {
+        "18.01 Search a maze": {
             "C++: search_maze.cc": {
                 "passed": 101,
                 "total": 101
@@ -2460,7 +2460,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "19.02 Paint a Boolean matrix": {
+        "18.02 Paint a Boolean matrix": {
             "C++: matrix_connected_regions.cc": {
                 "passed": 0,
                 "total": 50
@@ -2474,7 +2474,7 @@ problem_mapping = {
                 "total": 50
             }
         },
-        "19.03 Compute enclosed regions": {
+        "18.03 Compute enclosed regions": {
             "C++: matrix_enclosed_regions.cc": {
                 "passed": 51,
                 "total": 51
@@ -2488,7 +2488,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "19.04 Deadlock detection": {
+        "18.04 Deadlock detection": {
             "C++: deadlock_detection.cc": {
                 "passed": 71,
                 "total": 71
@@ -2502,7 +2502,7 @@ problem_mapping = {
                 "total": 71
             }
         },
-        "19.05 Clone a graph": {
+        "18.05 Clone a graph": {
             "C++: graph_clone.cc": {
                 "passed": 0,
                 "total": 91
@@ -2516,7 +2516,7 @@ problem_mapping = {
                 "total": 91
             }
         },
-        "19.06 Making wired connections": {
+        "18.06 Making wired connections": {
             "C++: is_circuit_wirable.cc": {
                 "passed": 0,
                 "total": 85
@@ -2530,7 +2530,7 @@ problem_mapping = {
                 "total": 85
             }
         },
-        "19.07 Transform one string to another": {
+        "18.07 Transform one string to another": {
             "C++: string_transformability.cc": {
                 "passed": 0,
                 "total": 48
@@ -2544,7 +2544,7 @@ problem_mapping = {
                 "total": 48
             }
         },
-        "19.08 Team photo day---2": {
+        "18.08 Team photo day---2": {
             "C++: max_teams_in_photograph.cc": {
                 "passed": 69,
                 "total": 69

@@ -4,6 +4,7 @@
 
 using std::vector;
 
+// Time: O(sn), Space: O(sn), s is size of score, n is the size of score
 int NumCombinationsForFinalScore(int final_score,
                                  const vector<int>& individual_play_scores) {
   vector<vector<int>> num_combinations_for_score(
@@ -11,7 +12,8 @@ int NumCombinationsForFinalScore(int final_score,
   for (int i = 0; i < size(individual_play_scores); ++i) {
     num_combinations_for_score[i][0] = 1;  // One way to reach 0.
     for (int j = 1; j <= final_score; ++j) {
-      int without_this_play = i >= 1 ? num_combinations_for_score[i - 1][j] : 0;
+      int without_this_play = 
+          i >= 1 ? num_combinations_for_score[i - 1][j] : 0;
       int with_this_play =
           j >= individual_play_scores[i]
               ? num_combinations_for_score[i][j - individual_play_scores[i]]

@@ -6,10 +6,13 @@
 using std::max;
 using std::vector;
 
+// MaximumSubarray is
+// i) A[i] or
+// ii) Sum[0:i-1] + A[i]
 int FindMaximumSubarray(const vector<int>& A) {
   int max_seen = 0, max_end = 0;
   for (int a : A) {
-    max_end = max(a, a + max_end);
+    max_end = max(a, a + max_end);  // A[i] or Sum[0:i-1] + A[i]
     max_seen = max(max_seen, max_end);
   }
   return max_seen;

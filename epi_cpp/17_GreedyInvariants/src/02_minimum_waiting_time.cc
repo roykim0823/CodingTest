@@ -6,6 +6,7 @@
 
 using std::vector;
 
+// Time: O(nlogn)
 int MinimumTotalWaitingTime(vector<int> service_times) {
   // Sort the service times in increasing order.
   sort(begin(service_times), end(service_times));
@@ -13,7 +14,7 @@ int MinimumTotalWaitingTime(vector<int> service_times) {
   int total_waiting_time = 0;
   for (int i = 0; i < size(service_times); ++i) {
     int num_remaining_queries = size(service_times) - (i + 1);
-    total_waiting_time += service_times[i] * num_remaining_queries;
+    total_waiting_time += service_times[i] * num_remaining_queries;  // multiply the time and query
   }
   return total_waiting_time;
 }

@@ -12,6 +12,7 @@ struct PairedTasks {
   int task_1, task_2;
 };
 
+// Time: O(nlogn)
 vector<PairedTasks> OptimumTaskAssignment(vector<int> task_durations) {
   sort(begin(task_durations), end(task_durations));
   vector<PairedTasks> optimum_assignments;

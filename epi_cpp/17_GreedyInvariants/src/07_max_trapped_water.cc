@@ -7,6 +7,7 @@ using std::max;
 using std::min;
 using std::vector;
 
+// Time: O(n), Space: O(1), this is similar to twosum
 int GetMaxTrappedWater(const vector<int>& heights) {
   int i = 0, j = size(heights) - 1, max_water = 0;
   while (i < j) {

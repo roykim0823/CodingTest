@@ -1,42 +1,50 @@
+
 #include <algorithm>
+#include <deque>
+#include <queue>
 #include <stdexcept>
+#include <string>
 
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
 
-#define main _main
-#define ProgramConfig _ProgramConfig
-#include "stack_with_max.cc"
-#undef main
-#undef ProgramConfig
-
+using std::deque;
 using std::length_error;
-using std::max;
+using std::queue;
 
+template <typename T>
 class QueueWithMax {
  public:
-  void Enqueue(int x) { enqueue_.Push(x); }
-
-  int Dequeue() {
-    if (dequeue_.Empty()) {
-      while (!enqueue_.Empty()) {
-        dequeue_.Push(enqueue_.Pop());
-      }
+  void Enqueue(const T& x) {
+    entries_.emplace(x);
+    // Eliminate dominated elements in candidates_for_max_.
+    while (!empty(candidates_for_max_) && candidates_for_max_.back() < x) {
+      candidates_for_max_.pop_back();
     }
-    return dequeue_.Pop();
+    candidates_for_max_.emplace_back(x);
   }
 
-  int Max() const {
-    if (!enqueue_.Empty()) {
-      return dequeue_.Empty() ? enqueue_.Max()
-                              : max(enqueue_.Max(), dequeue_.Max());
+  T Dequeue() {
+    T result = entries_.front();
+
+    // pop_front the max if the element is same as the max
+    if (result == candidates_for_max_.front()) {
+      candidates_for_max_.pop_front();  
     }
-    return dequeue_.Max();
+    entries_.pop();
+    return result;
   }
+
+  const T& Max() const { return candidates_for_max_.front(); }
+
+  T& Head() { return entries_.front(); }
+
+  const T& Head() const { return entries_.front(); }
 
  private:
-  Stack enqueue_, dequeue_;
+  queue<T> entries_;
+  deque<T> candidates_for_max_;
 };
 
 struct QueueOp {
@@ -65,7 +73,7 @@ struct SerializationTrait<QueueOp> : UserSerTrait<QueueOp, std::string, int> {};
 
 void QueueTester(const std::vector<QueueOp>& ops) {
   try {
-    QueueWithMax q;
+    QueueWithMax<int> q;
     for (auto& x : ops) {
       switch (x.op) {
         case QueueOp::Operation::kConstruct:
@@ -90,7 +98,7 @@ void QueueTester(const std::vector<QueueOp>& ops) {
         } break;
       }
     }
-  } catch (const length_error&) {
+  } catch (length_error&) {
     throw TestFailure("Unexpected length_error exception");
   }
 }
@@ -101,7 +109,7 @@ void QueueTester(const std::vector<QueueOp>& ops) {
 int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"ops"};
-  return GenericTestMain(args, "queue_with_max.cc", "queue_with_max.tsv", &QueueTester,
+  return GenericTestMain(args, "queue_with_max_using_deque.cc", "queue_with_max.tsv", &QueueTester,
                          DefaultComparator{}, param_names);
 }
 // clang-format on

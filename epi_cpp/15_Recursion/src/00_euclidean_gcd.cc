@@ -1,5 +1,6 @@
 #include "test_framework/generic_test.h"
 
+// y > x, Time O(log(max(x,y)))
 long long Gcd(long long x, long long y) { return y == 0 ? x : Gcd(y, x % y); }
 
 int main(int argc, char* argv[]) {

@@ -24,7 +24,7 @@ int ComputeNumberOfWaysToXY(int x, int y,
 
   vector<vector<int>>& number_of_ways = *number_of_ways_ptr;
   if (number_of_ways[x][y] == 0) {
-    int ways_top =
+    int ways_top =  // 0 check for the out bound value -> 0
         x == 0 ? 0 : ComputeNumberOfWaysToXY(x - 1, y, number_of_ways_ptr);
     int ways_left =
         y == 0 ? 0 : ComputeNumberOfWaysToXY(x, y - 1, number_of_ways_ptr);

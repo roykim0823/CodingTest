@@ -22,7 +22,7 @@ bool HasTwoSum1(vector<int>& A, int target) {
 }
 
 // Using Sorting: Time=O(nlogn), Space=O(1) for inspace sort
-bool HasTwoSum2(vector<int>& A, int target) {
+bool HasTwoSum(vector<int>& A, int target) {
   std::sort(A.begin(), A.end());
   int i = 0, j = A.size() - 1;
   while (i < j) {
@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A", "target"};
   bool test1 = GenericTestMain(args, "two_sum.cc", "two_sum.tsv", &HasTwoSum1,  // A is sorted in two_sum.tsv
                          DefaultComparator{}, param_names);
-  bool test2 = GenericTestMain(args, "two_sum.cc", "two_sum.tsv", &HasTwoSum2,  // A is sorted in two_sum.tsv
+  bool test2 = GenericTestMain(args, "two_sum.cc", "two_sum.tsv", &HasTwoSum,  // A is sorted in two_sum.tsv
                          DefaultComparator{}, param_names);
   bool test3 = GenericTestMain(args, "two_sum.cc", "two_sum.tsv", &HasTwoSum3,  // A is sorted in two_sum.tsv
                          DefaultComparator{}, param_names);

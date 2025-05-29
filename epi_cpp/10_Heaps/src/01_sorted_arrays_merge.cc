@@ -12,14 +12,17 @@ using std::vector;
 
 vector<int> MergeSortedArrays(const vector<vector<int>>& sorted_arrays) {
   struct IteratorCurrentAndEnd {
+    // heap order is decided by the value pointed by the current iterator
     bool operator<(const IteratorCurrentAndEnd& that) const {
       return *current > *that.current;
     }
 
-    vector<int>::const_iterator current, end;
+    vector<int>::const_iterator current, end;  // it holds each sorted array's iterator
   };
+
   priority_queue<IteratorCurrentAndEnd> min_heap;
 
+  // Just push the current begin and end iterator of each sorted array.
   for (const vector<int>& sorted_array : sorted_arrays) {
     if (!empty(sorted_array)) {
       min_heap.push({cbegin(sorted_array), cend(sorted_array)});
@@ -32,7 +35,7 @@ vector<int> MergeSortedArrays(const vector<vector<int>>& sorted_arrays) {
     min_heap.pop();
     result.emplace_back(*current);
     if (next(current) != end) {
-      min_heap.push({next(current), end});
+      min_heap.push({next(current), end});  // reinserted the array by moving the current
     }
   }
   return result;
