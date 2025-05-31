@@ -465,6 +465,190 @@ problem_mapping = {
             }
         }
     },
+    "Chapter 06: Strings": {
+        "6.00 Bootcamp: Strings": {
+            "C++: is_string_palindromic.cc": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Java: IsStringPalindromic.java": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Python: is_string_palindromic.py": {
+                "passed": 0,
+                "total": 10000
+            }
+        },
+        "6.01 Interconvert strings and integers": {
+            "C++: string_integer_interconversion.cc": {
+                "passed": 0,
+                "total": 15002
+            },
+            "Java: StringIntegerInterconversion.java": {
+                "passed": 0,
+                "total": 15002
+            },
+            "Python: string_integer_interconversion.py": {
+                "passed": 0,
+                "total": 15002
+            }
+        },
+        "6.02 Base conversion": {
+            "C++: convert_base.cc": {
+                "passed": 0,
+                "total": 20001
+            },
+            "Java: ConvertBase.java": {
+                "passed": 0,
+                "total": 20001
+            },
+            "Python: convert_base.py": {
+                "passed": 0,
+                "total": 20001
+            }
+        },
+        "6.03 Compute the spreadsheet column encoding": {
+            "C++: spreadsheet_encoding.cc": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Java: SpreadsheetEncoding.java": {
+                "passed": 0,
+                "total": 10000
+            },
+            "Python: spreadsheet_encoding.py": {
+                "passed": 0,
+                "total": 10000
+            }
+        },
+        "6.04 Replace and remove": {
+            "C++: replace_and_remove.cc": {
+                "passed": 0,
+                "total": 501
+            },
+            "Java: ReplaceAndRemove.java": {
+                "passed": 0,
+                "total": 501
+            },
+            "Python: replace_and_remove.py": {
+                "passed": 0,
+                "total": 501
+            }
+        },
+        "6.05 Test palindromicity": {
+            "C++: is_string_palindromic_punctuation.cc": {
+                "passed": 0,
+                "total": 305
+            },
+            "Java: IsStringPalindromicPunctuation.java": {
+                "passed": 0,
+                "total": 305
+            },
+            "Python: is_string_palindromic_punctuation.py": {
+                "passed": 0,
+                "total": 305
+            }
+        },
+        "6.06 Reverse all the words in a sentence": {
+            "C++: reverse_words.cc": {
+                "passed": 0,
+                "total": 103
+            },
+            "Java: ReverseWords.java": {
+                "passed": 0,
+                "total": 103
+            },
+            "Python: reverse_words.py": {
+                "passed": 0,
+                "total": 103
+            }
+        },
+        "6.07 The look-and-say problem": {
+            "C++: look_and_say.cc": {
+                "passed": 0,
+                "total": 40
+            },
+            "Java: LookAndSay.java": {
+                "passed": 0,
+                "total": 40
+            },
+            "Python: look_and_say.py": {
+                "passed": 0,
+                "total": 40
+            }
+        },
+        "6.08 Convert from Roman to decimal": {
+            "C++: roman_to_integer.cc": {
+                "passed": 0,
+                "total": 3999
+            },
+            "Java: RomanToInteger.java": {
+                "passed": 0,
+                "total": 3999
+            },
+            "Python: roman_to_integer.py": {
+                "passed": 0,
+                "total": 3999
+            }
+        },
+        "6.09 Compute all valid IP addresses": {
+            "C++: valid_ip_addresses.cc": {
+                "passed": 0,
+                "total": 10008
+            },
+            "Java: ValidIpAddresses.java": {
+                "passed": 0,
+                "total": 10008
+            },
+            "Python: valid_ip_addresses.py": {
+                "passed": 0,
+                "total": 10008
+            }
+        },
+        "6.10 Write a string sinusoidally": {
+            "C++: snake_string.cc": {
+                "passed": 0,
+                "total": 500
+            },
+            "Java: SnakeString.java": {
+                "passed": 0,
+                "total": 500
+            },
+            "Python: snake_string.py": {
+                "passed": 0,
+                "total": 500
+            }
+        },
+        "6.11 Implement run-length encoding": {
+            "C++: run_length_compression.cc": {
+                "passed": 0,
+                "total": 200
+            },
+            "Java: RunLengthCompression.java": {
+                "passed": 0,
+                "total": 200
+            },
+            "Python: run_length_compression.py": {
+                "passed": 0,
+                "total": 200
+            }
+        },
+        "6.12 Find the first occurrence of a substring": {
+            "C++: substring_match.cc": {
+                "passed": 0,
+                "total": 835
+            },
+            "Java: SubstringMatch.java": {
+                "passed": 0,
+                "total": 835
+            },
+            "Python: substring_match.py": {
+                "passed": 0,
+                "total": 835
+            }
+        }
+    },
     "Chapter 07: Linked Lists": {
         "7.00 Bootcamp: Linked Lists": {
             "C++: delete_from_list.cc": {
@@ -684,190 +868,6 @@ problem_mapping = {
             "Python: int_as_list_add.py": {
                 "passed": 0,
                 "total": 2002
-            }
-        }
-    },
-    "Chapter 06: Strings": {
-        "6.01 Interconvert strings and integers": {
-            "C++: string_integer_interconversion.cc": {
-                "passed": 0,
-                "total": 15002
-            },
-            "Java: StringIntegerInterconversion.java": {
-                "passed": 0,
-                "total": 15002
-            },
-            "Python: string_integer_interconversion.py": {
-                "passed": 0,
-                "total": 15002
-            }
-        },
-        "6.02 Base conversion": {
-            "C++: convert_base.cc": {
-                "passed": 0,
-                "total": 20001
-            },
-            "Java: ConvertBase.java": {
-                "passed": 0,
-                "total": 20001
-            },
-            "Python: convert_base.py": {
-                "passed": 0,
-                "total": 20001
-            }
-        },
-        "6.03 Compute the spreadsheet column encoding": {
-            "C++: spreadsheet_encoding.cc": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Java: SpreadsheetEncoding.java": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Python: spreadsheet_encoding.py": {
-                "passed": 0,
-                "total": 10000
-            }
-        },
-        "6.04 Replace and remove": {
-            "C++: replace_and_remove.cc": {
-                "passed": 0,
-                "total": 501
-            },
-            "Java: ReplaceAndRemove.java": {
-                "passed": 0,
-                "total": 501
-            },
-            "Python: replace_and_remove.py": {
-                "passed": 0,
-                "total": 501
-            }
-        },
-        "6.05 Test palindromicity": {
-            "C++: is_string_palindromic_punctuation.cc": {
-                "passed": 0,
-                "total": 305
-            },
-            "Java: IsStringPalindromicPunctuation.java": {
-                "passed": 0,
-                "total": 305
-            },
-            "Python: is_string_palindromic_punctuation.py": {
-                "passed": 0,
-                "total": 305
-            }
-        },
-        "6.06 Reverse all the words in a sentence": {
-            "C++: reverse_words.cc": {
-                "passed": 0,
-                "total": 103
-            },
-            "Java: ReverseWords.java": {
-                "passed": 0,
-                "total": 103
-            },
-            "Python: reverse_words.py": {
-                "passed": 0,
-                "total": 103
-            }
-        },
-        "6.07 The look-and-say problem": {
-            "C++: look_and_say.cc": {
-                "passed": 0,
-                "total": 40
-            },
-            "Java: LookAndSay.java": {
-                "passed": 0,
-                "total": 40
-            },
-            "Python: look_and_say.py": {
-                "passed": 0,
-                "total": 40
-            }
-        },
-        "6.08 Convert from Roman to decimal": {
-            "C++: roman_to_integer.cc": {
-                "passed": 0,
-                "total": 3999
-            },
-            "Java: RomanToInteger.java": {
-                "passed": 0,
-                "total": 3999
-            },
-            "Python: roman_to_integer.py": {
-                "passed": 0,
-                "total": 3999
-            }
-        },
-        "6.09 Compute all valid IP addresses": {
-            "C++: valid_ip_addresses.cc": {
-                "passed": 0,
-                "total": 10008
-            },
-            "Java: ValidIpAddresses.java": {
-                "passed": 0,
-                "total": 10008
-            },
-            "Python: valid_ip_addresses.py": {
-                "passed": 0,
-                "total": 10008
-            }
-        },
-        "6.10 Write a string sinusoidally": {
-            "C++: snake_string.cc": {
-                "passed": 0,
-                "total": 500
-            },
-            "Java: SnakeString.java": {
-                "passed": 0,
-                "total": 500
-            },
-            "Python: snake_string.py": {
-                "passed": 0,
-                "total": 500
-            }
-        },
-        "6.11 Implement run-length encoding": {
-            "C++: run_length_compression.cc": {
-                "passed": 0,
-                "total": 200
-            },
-            "Java: RunLengthCompression.java": {
-                "passed": 0,
-                "total": 200
-            },
-            "Python: run_length_compression.py": {
-                "passed": 0,
-                "total": 200
-            }
-        },
-        "6.12 Find the first occurrence of a substring": {
-            "C++: substring_match.cc": {
-                "passed": 0,
-                "total": 835
-            },
-            "Java: SubstringMatch.java": {
-                "passed": 0,
-                "total": 835
-            },
-            "Python: substring_match.py": {
-                "passed": 0,
-                "total": 835
-            }
-        },
-        "6.00 Bootcamp: Strings": {
-            "C++: is_string_palindromic.cc": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Java: IsStringPalindromic.java": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Python: is_string_palindromic.py": {
-                "passed": 0,
-                "total": 10000
             }
         }
     },
@@ -2432,7 +2432,7 @@ problem_mapping = {
         },
         "17.08 Compute the largest rectangle under the skyline": {
             "C++: largest_rectangle_under_skyline.cc": {
-                "passed": 0,
+                "passed": 1004,
                 "total": 1004
             },
             "Java: LargestRectangleUnderSkyline.java": {
