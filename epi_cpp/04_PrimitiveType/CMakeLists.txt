@@ -1,9 +1,7 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(05)
 
 set(CMAKE_CXX_FLAGS "-std=c++1z -g -Wall")
-
-include_directories(include)
 
 file(GLOB SRCS "src/*.cc")
 
